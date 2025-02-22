@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'screen/page_satu.dart';  // Import halaman Page 1
+import 'screen/page_dua.dart';   // Import halaman Page 2
+import 'screen/page_tiga.dart';  // Import halaman Page 3
+import 'screen/page_empat.dart'; // Import halaman Page 4
 
 void main() {
   runApp(const MyApp());
@@ -7,27 +11,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -37,7 +25,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//ketik st
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
 
@@ -45,20 +32,47 @@ class PageOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //appBar : properti dari sebuah widget
-        //AppBar : widget
-
-        title: Text('Aplikasi Pertama',
+        title: const Text(
+          'Aplikasi Pertama',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Text("Selamat Datang di Flutter App pertama MI 2B"),
-        //child :  cuma bisa nampung 1 widget
-        //children : bisa nampung beberapa widget
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Text("Selamat Datang di Flutter App pertama MI 2B"),
+            _buildButton(context, "Page 1", const PageSatu()),
+            _buildButton(context, "Page 2", const PageDua()),
+            _buildButton(context, "Page 3", const PageTiga()),
+            _buildButton(context, "Page 4", const PageEmpat()), // Tombol untuk Page 4
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildButton(BuildContext context, String text, Widget page) {
+    return MaterialButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => page),
+        );
+      },
+      color: Colors.purple,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          text,
+          style: const TextStyle(fontSize: 14, color: Colors.white),
+        ),
       ),
     );
   }
 }
-
