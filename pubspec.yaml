@@ -31,9 +31,15 @@ dependencies:
   flutter:
     sdk: flutter
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  cached_network_image: ^3.4.1
+  flutter_styled_toast: ^2.2.1
+  intl: ^0.19.0
+  flutter_rating_bar: ^4.0.1
+
 
 dev_dependencies:
   flutter_test:
@@ -58,9 +64,47 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+
+    - gambar/dsn1.jpg
+    - gambar/dsn2.jpg
+    - gambar/dsn3.jpg
+    - gambar/dsn4.jpg
+    - gambar/movie1.jpg
+    - gambar/movie2.png
+    - gambar/movie3.jpg
+    - gambar/movie4.jpg
+    - gambar/berita1.jpeg
+    - gambar/berita2.jpeg
+    - gambar/berita3.jpeg
+    - gambar/berita4.jpg
+    - gambar/logo1.png
+    - gambar/logo2.png
+    - gambar/fingerprint.png
+    - gambar/google.png
+    - gambar/facebook.png
+    - gambar/frame.png
+    - gambar/bck.png
+    - gambar/chemistri.png
+    - gambar/marketing.png
+    - gambar/accounting.png
+    - gambar/security.png
+    - gambar/biology.png
+    - gambar/photography.png
+    - gambar/dsn5.jpg
+    - gambar/dsn6.jpg
+    - gambar/dsn7.jpg
+    - gambar/dsn8.jpg
+
+
+fonts:
+  - family: Fredoka
+    fonts:
+      - asset: fonts/Fredoka-Regular.ttf
+      - asset: fonts/Fredoka-Bold.ttf
+        weight: 700
   #   - images/a_dot_ham.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
