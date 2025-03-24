@@ -4,6 +4,7 @@ import 'package:project1/Screen/latihan_form/page_grid_dosen.dart';
 import 'package:project1/Screen/latihan_form/page_register.dart';
 import 'package:project1/Screen/latihan_yummy/page_splash_screen.dart';
 import 'package:project1/Screen/nav_bar/page_tab_bar.dart';
+import 'package:project1/Screen/page_search_list.dart';
 import 'screen/page_satu.dart';
 import 'screen/page_dua.dart';
 import 'screen/page_tiga.dart';
@@ -73,6 +74,7 @@ class PageOne extends StatelessWidget {
             _buildButton(context, "Page Form Dosen", const PageRegister()),// Tambahkan tombol baru
             _buildButton(context, "Page Grid Dosen", const PageGridDosen()),// Tambahkan tombol baru
             _buildButton(context, "Page Yummy Apps", const SplashScreen()),// Tambahkan tombol baru
+            _buildButton(context, "Page Search List", const PageSearchList()),// Tambahkan tombol baru
           ],
         ),
       ),
